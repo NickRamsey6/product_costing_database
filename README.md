@@ -9,14 +9,15 @@ This program will allow a local pizza business to gain a better understanding of
 *	Store and return (CRUD) pizza recipes
 *	Calculate COGS (cost of good sold)
 *	Compare COGS across multiple stores
+<img src="./public/Screen Shot 2019-09-24 at 5.14.16 PM.png" alt="dashboard view" />
 
 ## Stretch Goals
 *	Ideally the program will read csv files and maybe print updated csv’s
 *	A way for the program to generate ingredients order forms based off products sold/ingredients remaining
 *	Sales Forecasting
 
-## Database Schema
-<img src="./public/Screen Shot 2019-09-23 at 7.20.59 AM.png"
+## Database Schema UPDATED
+<img src="./public/Screen Shot 2019-09-27 at 2.19.40 PM.png"
      alt="schema"
 />
 
