@@ -9,6 +9,7 @@ This program will allow a local pizza business to gain a better understanding of
 *	Store and return (CRUD) pizza recipes
 *	Calculate COGS (cost of good sold)
 *	Compare COGS across multiple stores
+* Example Dashboard View:
 <img src="./public/Screen Shot 2019-09-24 at 5.14.16 PM.png" alt="dashboard view" />
 
 ## Stretch Goals
