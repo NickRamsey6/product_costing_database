@@ -2,7 +2,6 @@
 <h1><%= @week.sales %></h1>
 <h1><%= @week.labor %></h1>
 
-<%require 'pry'; binding.pry%>
 
 
 <% if @week.days.any? %>
@@ -11,10 +10,17 @@
 <% @week.days.each do |day| %>
 <ul>
   <li>
-    <%= link_to day.date, store_week_day_path(@week, day) %>
+    <%= link_to day.date, week_day_path(@week, day) %>
   </li>
 </ul>
 <% end %>
 <% else %>
 <p> no days </p>
 <% end %>
+
+<h3>Import Daily Data</h3>
+<%= form_tag import_week_days_path(@week), multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+<p><%= link_to "Add daily data", new_week_day_path(@week) %></p>
