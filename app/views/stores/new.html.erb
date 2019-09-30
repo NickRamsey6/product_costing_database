@@ -1,0 +1,45 @@
+<h1>New Store</h1>
+
+<%= form_for @store do |f| %>
+  <%= f.label :name %>
+  <%=f.text_field :name %>
+  <%= f.label :dailysales %>
+  <%=f.number_field :dailysales %>
+  <%= f.label :labor %>
+  <%=f.number_field :labor %>
+  <%= f.label :cheese %>
+  <%=f.number_field :cheese %>
+  <%= f.label :pepperoni %>
+  <%=f.number_field :pepperoni %>
+  <%= f.label :meatlover %>
+  <%=f.number_field :meatlover %>
+  <%= f.label :bbqchicken %>
+  <%=f.number_field :bbqchicken %>
+  <%= f.label :carneamante %>
+  <%=f.number_field :carneamante %>
+  <%= f.label :buffalochicken %>
+  <%=f.number_field :buffalochicken %>
+  <%= f.label :italiansausage %>
+  <%=f.number_field :italiansausage %>
+  <%= f.label :hawaiian %>
+  <%=f.number_field :hawaiian %>
+  <%= f.label :garlicvegetarian %>
+  <%=f.number_field :garlicvegetarian %>
+  <%= f.label :chickenpesto %>
+  <%=f.number_field :chickenpesto %>
+  <%= f.label :mediterranean %>
+  <%=f.number_field :mediterranean %>
+  <%= f.label :tuscanveggie %>
+  <%=f.number_field :tuscanveggie %>
+  <%= f.label :margherita %>
+  <%=f.number_field :margherita %>
+  <%= f.label :primerib %>
+  <%=f.number_field :primerib %>
+  <%= f.label :thaichicken %>
+  <%=f.number_field :thaichicken %>
+  <%= f.label :gryo %>
+  <%=f.number_field :gryo %>
+  <%= f.label :coconutshrimp %>
+  <%=f.number_field :coconutshrimp %>
+  <%= f.submit %>
+<% end %>
