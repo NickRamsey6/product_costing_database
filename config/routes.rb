@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   resources :stores do
     resources :weeks do
       collection { post :import }
-      resources :days do
-        collection { post :import }
       end
+    end
+  resources :weeks do
+    resources :days do
+      collection { post :import }
     end
   end
 end
