@@ -1,0 +1,7 @@
+<h1>Import Day Data</h1>
+
+<h3>Import Data</h3>
+<%= form_tag import_days_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload" %>
+  <% end %>

@@ -1,0 +1,24 @@
+<h1><%= @week.week_of %></h1>
+<h1><%= @week.sales %></h1>
+<h1><%= @week.labor %></h1>
+
+<% if @week.days.any? %>
+<h4>Daily Stats:</h4>
+
+<% @week.days.each do |day|
+<ul>
+  <li>
+    <%= link_to day.date, week_day_path(@week, day) %>
+  </li>
+</ul>
+<% end %>
+<% else %>
+<p>No Daily data for this store.</p>
+<% end %>
+
+<h3>Import Daily Data</h3>
+<%= form_tag import_days_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+<p><%= link_to "Add daily data", new_day_path %></p>

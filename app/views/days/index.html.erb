@@ -1,0 +1,18 @@
+<h1>Days</h1>
+
+<% if @days.any? %>
+<ul>
+  <% @days.each do |day| %>
+  <li><%= link_to day.date, day_path(day) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no days yet.</p>
+<% end %>
+
+<h3>Import Data</h3>
+<%= form_tag import_days_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload" %>
+  <% end %>
+<p><%= link_to "Add a day", new_day_path %></p>

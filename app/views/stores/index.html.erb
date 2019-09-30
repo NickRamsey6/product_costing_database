@@ -10,9 +10,4 @@
 <p>There are no stores yet.</p>
 <% end %>
 
-<h3>Import Data</h3>
-<%= form_tag import_stores_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload" %>
-  <% end %>
 <p><%= link_to "Add a store", new_store_path %></p>
