@@ -20,4 +20,34 @@ class StoresController < ApplicationController
       render :new
     end
   end
-    
+
+  def edit
+    @store = Store.find(params[:id])
+    render :edit
+  end
+
+  def show
+    @store = Store.find(params[:id])
+    render :show
+  end
+
+  def update
+    @store = Store.find(params[:id])
+    if @store.update(store_params)
+      redirect_to stores_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @store = Store.find(params[:id])
+    @store.destory
+    redirect_to stores_path
+  end
+
+  private
+  def stores_path
+    params.require(:store).permit(:name)
+  end
+end 
