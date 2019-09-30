@@ -46,6 +46,11 @@ class StoresController < ApplicationController
     redirect_to stores_path
   end
 
+  def import
+    Store.import(params[:file])
+    redirect_to stores_path, notice: "Stores added!"
+  end
+
   private
   def store_params
     params.require(:store).permit(:name)
