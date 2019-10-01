@@ -12,10 +12,8 @@ class MastersController < ApplicationController
   def create
     @master = Master.create(master_params)
     if @master.save
-      flash[:notice] = "Masters added!"
       redirect_to masters_path
     else
-      flash[:alert] = "Not added"
       render :new
     end
   end
