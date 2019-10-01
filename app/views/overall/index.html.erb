@@ -1,14 +1,18 @@
 <h1>Tuscan Stone Pizza</h1>
 
 <h2>Total Sales (ytd)</h2>
-<%= @overall_sales %>
+  <%= @overall_sales %>
 
 <h2>Total Labor (ytd)</h2>
-<%= @overall_labor %>
+  <%= @overall_labor %>
+
 
 
 <h3>Import Sales Data</h3>
-<%= form_tag import_sales_path, multipart: true do %>
+<%= form_tag import_masters_path, multipart: true do %>
 <%= file_field_tag :file %>
 <%= submit_tag "Upload" %>
 <% end %>
+
+<h3>Stores:</h3>
+<p><%= link_to "New Castle", newcastle_path %></p>

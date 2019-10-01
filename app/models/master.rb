@@ -1,8 +1,8 @@
 require 'pg'
-class Sale < ApplicationRecord
+class Master < ApplicationRecord
     def self.import(file)
       CSV.foreach(file.path, headers: true) do |row|
-        Sale.create! row.to_hash
+        Master.create! row.to_hash
       end
     end
 end
