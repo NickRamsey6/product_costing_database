@@ -1,0 +1,15 @@
+<h1>Tuscan Stone Pizza</h1>
+
+<h2>Total</h2>
+<% @overall_sales.any? %>
+  <ul>
+    <% @overall_sales.each do |tot| %>
+    <li><%= link_to tot.labor %></li>
+  <% end %>
+  </ul>  
+
+<h3>Import Sales Data</h3>
+<%= form_tag import_sales_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
