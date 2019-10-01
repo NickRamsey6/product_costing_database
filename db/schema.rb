@@ -10,35 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_165420) do
+ActiveRecord::Schema.define(version: 2019_09_30_233218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "days", force: :cascade do |t|
-    t.datetime "date"
-    t.integer "sales"
-    t.integer "labor"
-    t.integer "week_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "stores", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "weeks", force: :cascade do |t|
-    t.datetime "week_of"
-    t.integer "sales"
-    t.integer "labor"
+  create_table "sales", force: :cascade do |t|
+    t.decimal "sales"
+    t.decimal "labor"
+    t.date "day"
     t.integer "store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "days", "weeks"
-  add_foreign_key "weeks", "stores"
 end
