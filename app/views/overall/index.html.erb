@@ -17,8 +17,17 @@
 <%= submit_tag "Upload" %>
 <% end %>
 
+<h3>Import Product Data</h3>
+<%= form_tag import_products_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
 <h3>Stores:</h3>
 <p><%= link_to "New Castle", newcastle_path %></p>
 <p><%= link_to "Mercer Island", mercerisland_path %></p>
 <p><%= link_to "Tiger Mountain", tigermountain_path %></p>
 <p><%= link_to "Issaquah", issaquah_path %></p>
+
+<h3>Products</h3>
+<p><%= link_to "Products", products_path %></p>

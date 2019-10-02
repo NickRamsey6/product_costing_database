@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   resources :masters do
     collection { post :import }
   end
+  resources :orders do
+    collection { post :import}
+    end
+  resources :products do
+    collection { post :import}
+  end
 
 get '/newcastle' => 'new_castle#index'
 get '/mercerisland' => 'mercer_island#index'
