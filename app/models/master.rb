@@ -7,6 +7,4 @@ class Master < ApplicationRecord
         master.save!
       end
     end
-
-    scope :mi_top_sales, -> { order(mi_sales: :desc).limit(10) }
 end

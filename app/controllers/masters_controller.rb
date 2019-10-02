@@ -1,7 +1,7 @@
+require 'pg'
 class MastersController < ApplicationController
   def index
     @masters = Master.all
-    @mi_sales = Master.mi_top_sales
     render :index
     respond_to do |format|
       format.html
@@ -51,6 +51,19 @@ class MastersController < ApplicationController
     Master.import(params[:file])
     redirect_to '/'
   end
+    # DB = PG.connect({:dbname => 'tuscan_stone_development'})
+    # def index
+    #
+    #   @is_sales = ActiveRecord::Base.connection.execute("SELECT SUM(is_sales) FROM masters;").values[0][0]
+    #   @is_labor = ActiveRecord::Base.connection.execute("SELECT SUM(is_labor) FROM masters;").values[0][0]
+    #   @mi_sales = ActiveRecord::Base.connection.execute("SELECT SUM(mi_sales) FROM masters;").values[0][0]
+    #   @mi_labor = ActiveRecord::Base.connection.execute("SELECT SUM(mi_labor) FROM masters;").values[0][0]
+    #   @nc_sales = ActiveRecord::Base.connection.execute("SELECT SUM(nc_sales) FROM masters;").values[0][0]
+    #   @nc_labor = ActiveRecord::Base.connection.execute("SELECT SUM(nc_labor) FROM masters;").values[0][0]
+    #   @tm_sales = ActiveRecord::Base.connection.execute("SELECT SUM(tm_sales) FROM masters;").values[0][0]
+    #   @tm_labor = ActiveRecord::Base.connection.execute("SELECT SUM(tm_labor) FROM masters;").values[0][0]
+    #   render :index
+    # end
 
   private
   def master_params
