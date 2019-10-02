@@ -1,0 +1,31 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>day</th>
+      <th>nc_sales</th>
+      <th>nc_labor</th>
+      <th>mi_sales</th>
+      <th>mi_labor</th>
+      <th>tm_sales</th>
+      <th>tm_labor</th>
+      <th>is_sales</th>
+      <th>is_labor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @masters.each do |master| %>
+    <tr>
+      <td><%= master.day %></td>
+      <td><%= master.nc_sales %></td>
+      <td><%= master.nc_labor %></td>
+      <td><%= master.mi_sales %></td>
+      <td><%= master.mi_labor %></td>
+      <td><%= master.tm_sales %></td>
+      <td><%= master.tm_labor %></td>
+      <td><%= master.is_sales %></td>
+      <td><%= master.is_labor %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -9,4 +9,5 @@ get '/newcastle' => 'new_castle#index'
 get '/mercerisland' => 'mercer_island#index'
 get '/tigermountain' => 'tiger_mountain#index'
 get '/issaquah' => 'issaquah#index'
+get '/master' => 'master#index'
 end

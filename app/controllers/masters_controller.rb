@@ -1,7 +1,11 @@
 class MastersController < ApplicationController
   def index
     @masters = Master.all
+    @mi_sales = Master.mi_top_sales
     render :index
+    respond_to do |format|
+      format.html
+    end
   end
 
   def new
