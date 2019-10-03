@@ -18,6 +18,7 @@ require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+config.assets.initialize_on_precompile = false
 Bundler.require(*Rails.groups)
 
 module TuscanStone
@@ -32,6 +33,5 @@ module TuscanStone
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.assets.initialize_on_precompile = false
   end
 end
