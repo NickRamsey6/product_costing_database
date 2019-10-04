@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <header>
+      <nav class='nav-style'>
+        <div class="nav">
+          <ul>
+            <li><%= link_to "New Castle", newcastle_path %></li>
+            <li><%= link_to "Mercer Island", mercerisland_path %></li>
+            <li><%= link_to "Tiger Mountain", tigermountain_path %></li>
+            <li><%= link_to "Issaquah", issaquah_path %></li>
+            <li><%= link_to "Home", '/' %></li>
+          </ul>
+            <%= yield :nav %>
+        </div>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
